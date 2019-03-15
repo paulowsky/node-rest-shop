@@ -1,6 +1,6 @@
 # NODE-REST-SHOP
 
-![SHOP](rest-shop.png)
+<img src="rest-shop.png" width="170px"/>
 
 A simple node shop RESTful API.
 (uses a mongodb cloud).
