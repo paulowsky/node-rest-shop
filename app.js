@@ -7,7 +7,13 @@ const app = express()
 const productRoutes = require('./api/routes/products')
 const orderRoutes = require('./api/routes/orders')
 
-mongoose.connect('mongodb+srv://node-shop:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop-mgcai.mongodb.net/test?retryWrites=true', {useNewUrlParser: true})
+mongoose.connect(
+    'mongodb+srv://node-shop:' + 
+    process.env.MONGO_ATLAS_PW + 
+    '@node-rest-shop-mgcai.mongodb.net/test?retryWrites=true', 
+    {useNewUrlParser: true}
+)
+mongoose.Promise = global.Promise
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({extended: false}))
