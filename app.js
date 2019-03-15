@@ -12,7 +12,7 @@ mongoose.connect(
     'mongodb+srv://node-shop:' + 
     process.env.MONGO_ATLAS_PW + 
     '@node-rest-shop-mgcai.mongodb.net/test?retryWrites=true', 
-    {useNewUrlParser: true}
+    {useNewUrlParser: true, useCreateIndex: true}
 )
 mongoose.Promise = global.Promise
 
